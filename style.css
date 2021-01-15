@@ -31,8 +31,12 @@
   height: 50%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-90deg);
   pointer-events: none;
+}
+
+.player-containersvg circle {
+  transition: all 0.2s ease-in-out;
 }
 
 .time-display {
@@ -77,11 +81,11 @@ video {
 }
 
 .sound-picker button:nth-child(1) {
-  background: blue;
+  background: rgb(64, 64, 153);
 }
 
 .sound-picker button:nth-child(2) {
-  background: brown;
+  background: rgb(148, 86, 67);
 }
 
 .sound-picker img {
