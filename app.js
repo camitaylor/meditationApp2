@@ -5,7 +5,7 @@ const app = () => {
     const video = document.querySelector(".vid-container video");
 
     //Sounds
-    const sounds = dcoument.querySelectorAll(".sound-picker button");
+    const sounds = document.querySelectorAll(".sound-picker button");
     //Time Display
     const timeDisplay = document.querySelector(".time-display");
     const outlineLength = outline.getTotalLength();
@@ -20,13 +20,22 @@ const app = () => {
             
 
     //pick different sounds
-    sounds.forEach(sound => {
+    /*sounds.forEach(sound => {
         sound.addEventListener("click", () => {
             song.src = this.getAttribute("data-sound");
             video.src = this.getAttribute("data-video");
             checkPlaying(song);
         });
+    });*/
+
+    //pick different sounds
+    sounds.forEach(sound => {
+        sound.addEventListener("click", (evt) => {
+            song.src = evt.path[1].getAttribute("data-sound")
+            video.src = evt.path[1].getAttribute("data-video")
+            checkPlaying(song);
     });
+   });
 
     //play sound
     play.addEventListener("click", () => {
