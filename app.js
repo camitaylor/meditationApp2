@@ -17,16 +17,7 @@ const app = () => {
     outline.style.strokeDasharray = outlineLength;
     outline.style.strokeDashoffset = outlineLength;
     timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${Math.floor(fakeDuration % 60)}`
-            
 
-    //pick different sounds
-    /*sounds.forEach(sound => {
-        sound.addEventListener("click", () => {
-            song.src = this.getAttribute("data-sound");
-            video.src = this.getAttribute("data-video");
-            checkPlaying(song);
-        });
-    });*/
 
     //pick different sounds
     sounds.forEach(sound => {
